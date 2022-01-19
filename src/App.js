@@ -4,22 +4,28 @@ import './App.css';
 import Character from './components/Character';
 
 function App(props) {
-  const { character, loading} = props;
+  const {loading, error} = props;
+
+  if(error !== ''){
+    return <h2>{error}</h2>;
+  }
 
   return (
     <div className="App">
       <h1>Genshin Impact Tartaglia</h1>
 
-      <Character character={character}/>
-
+      {
+        loading ? <h3>Loading Character Info</h3> : <Character />
+      }
+      
     </div>
   );
 }
 
 const mapStateToProps = (state) => {
   return {
-    character: state.character,
-    loading: state.loading
+    loading: state.loading,
+    error: state.error
   }
 }
 

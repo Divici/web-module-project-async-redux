@@ -1,5 +1,6 @@
 import React from "react";
 import MoreInfo from "./MoreInfo";
+import { connect } from "react-redux";
 
 const Character = (props) => {
     const character = props.character[0];
@@ -27,4 +28,10 @@ const Character = (props) => {
     )
 }
 
-export default Character;
+const mapStateToProps = (state) => {
+    return {
+        character: state.character
+    }
+}
+
+export default connect(mapStateToProps)(Character);
