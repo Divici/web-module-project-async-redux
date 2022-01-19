@@ -1,4 +1,10 @@
+* {
+	/* border: 1px black solid; */
+}
 
 body {
-	background: #f5f5f5;
+	color: white;
+	background: #1b376b;
+	width: 80%;
+	margin: 0 auto;
 }

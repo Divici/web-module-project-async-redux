@@ -1,5 +1,37 @@
-.App {
+.char-card, h1 {
   text-align: center;
+}
+
+h1 {
+  margin: 2% 0 80px;
+}
+
+.char-card {
+  border: 3px solid rgb(11, 17, 39);
+  width: 300px;
+  height: 400px;
+  background-image: linear-gradient( rgb(17, 26, 58), rgb(21, 32, 73));
+}
+
+.name {
+  width: 100%;
+}
+
+.photo {
+  height: 170px;
+  background-color: turquoise;
+  background-image: linear-gradient( rgb(17, 26, 58), rgb(57, 147, 183));
+}
+
+.base-info {
+  margin: 2% 0;
+  width: 100%;
+}
+
+.more-info {
+  margin: 2% 0;
+  border: 3px solid rgb(11, 17, 39);
+  background-color: rgb(17, 26, 58);
 }
 
 .App-logo {
