@@ -1,14 +1,24 @@
 import React from "react";
+import { connect } from "react-redux";
 
 const MoreInfo = (props) => {
+    const {character} = props;
     return (
         <div className='more-info'>
             <p>More information</p>
-            <p>No. 11 of The Harbingers, also known as \"Childe\". His name is highly feared on the battlefield.</p>
+            <p>Affiliation: {character.affiliation}</p>
+            <p>Description: </p>
+            {character.description}
         </div>
     )
 }
 
-export default MoreInfo;
+const mapStateToProps = (state) => {
+    return {
+        character: state.character
+    }
+}
+
+export default connect(mapStateToProps)(MoreInfo);
 
 

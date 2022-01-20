@@ -1,10 +1,15 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { connect } from 'react-redux';
+import { getCharacter } from './actions';
 import './App.css';
 import Character from './components/Character';
 
 function App(props) {
-  const {loading, error} = props;
+  const {loading, error, getCharacter} = props;
+
+  useEffect(()=>{
+    getCharacter();
+  }, []);
 
   if(error !== ''){
     return <h2>{error}</h2>;
@@ -29,4 +34,4 @@ const mapStateToProps = (state) => {
   }
 }
 
-export default connect(mapStateToProps)(App);
+export default connect(mapStateToProps, {getCharacter})(App);

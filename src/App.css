@@ -18,9 +18,20 @@ h1 {
 }
 
 .photo {
-  height: 170px;
+  width: 60%;
+  margin: 0 auto;
+  height: 150px;
   background-color: turquoise;
+  
   background-image: linear-gradient( rgb(17, 26, 58), rgb(57, 147, 183));
+}
+
+.img {
+  text-align: center;
+  background-repeat: no-repeat;
+  height: 195px;
+  background-position: center;
+  background-image: url('https://rerollcdn.com/GENSHIN/Characters/Tartaglia.png');
 }
 
 .base-info {

@@ -2,9 +2,10 @@ import React from "react";
 import MoreInfo from "./MoreInfo";
 import { connect } from "react-redux";
 
+
 const Character = (props) => {
-    const character = props.character[0];
-    console.log(character);
+    const {character} = props;
+
     return (
         <div>
             <div className='char-card'>
@@ -13,7 +14,9 @@ const Character = (props) => {
                     <h2>{character.name}</h2>
                 </div>
 
-                <div className='photo'></div>
+                <div className='photo'>
+                    <div className="img"></div>
+                </div>
 
                 <div className='base-info'>
                     <p>Vision: {character.vision}</p>
